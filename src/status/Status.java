@@ -15,19 +15,21 @@ import java.util.Scanner;
  * Use enumerators to avoid input errors
  * and print the status details. 
  * @author srinivsi
+ * @modified tahiiev
  */
 public class Status {
-
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args)
     {
     Scanner in =new Scanner(System.in);
-    System.out.println("Enter the user status code (zero,one,two,three) in string");
-    String code = in.next();
-    StausUser t= new StausUser();
-    t.statusDetail(code); 
+    System.out.println("Enter the user status code (0,1,2,3) in integer");
+    int code = in.nextInt();
+    
+    //code passed to StatusClass in a constructor argument
+    StausUser t= new StausUser(code);
+    t.statusDetail(); 
     }
     
 }
